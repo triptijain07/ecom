@@ -1,0 +1,9 @@
+Django==5.2.3
+djangorestframework
+django-filter
+requests
+qrcode
+pillow
+PyJWT
+celery[redis]
+redis

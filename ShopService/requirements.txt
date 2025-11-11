@@ -1,0 +1,4 @@
+djangorestframework 
+djangorestframework-gis 
+psycopg2-binary
+python-jose
