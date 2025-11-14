@@ -2,3 +2,4 @@ djangorestframework
 djangorestframework-gis 
 psycopg2-binary
 python-jose
+PyJWT==2.8.0

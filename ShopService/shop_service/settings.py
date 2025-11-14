@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-dcad@3$qci-wbe+ku#*4(8fwfo^4(q@07=)9x2(#pmlf_=^*sg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,14 +76,13 @@ WSGI_APPLICATION = 'shop_service.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 
-'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.spatialite',
         'NAME': BASE_DIR / "db.sqlite3",
     }
 }
-'''
+
 
 #SPATIALITE_LIBRARY_PATH = "mod_spatialite.dll"
 
@@ -138,27 +137,21 @@ REST_FRAMEWORK = {
     ],
 }
 
-
-
 import os
 from ctypes import CDLL
 
-# Path to GDAL installation (adjust based on your system)
-GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal311.dll"  # example path
-
-# Ensure GDAL is loaded
+# Try to load GDAL library on Linux (used in Docker/Ubuntu)
 try:
-    CDLL(GDAL_LIBRARY_PATH)
+    CDLL("libgdal.so")
 except OSError as e:
     raise RuntimeError(f"Could not load GDAL library: {e}")
-
 
 JWT_SECRET_KEY = "django-insecure-%$h2nuhjliy!w4z1*9o*fm6r-38@sntd(z&j-s0uztl($_epx@"  # should be same as Auth Service
 JWT_ALGORITHM = "HS256"
 JWT_ACCESS_TOKEN_EXPIRE_MINUTES = 15
 JWT_REFRESH_TOKEN_EXPIRE_DAYS = 7
 
-
+'''
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -172,3 +165,4 @@ DATABASES = {
             },
     }
 }
+'''

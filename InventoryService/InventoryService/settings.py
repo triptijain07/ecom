@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+*)==n-_kft_+d#2gm^q$4pzesjuu032v@#1@@d75k6n5owe2^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -144,7 +144,7 @@ JWT_ALGORITHM = "HS256"
 JWT_ACCESS_TOKEN_EXPIRE_MINUTES = 15
 JWT_REFRESH_TOKEN_EXPIRE_DAYS = 7
 
-
+'''
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -158,3 +158,4 @@ DATABASES = {
             },
     }
 }
+'''

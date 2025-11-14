@@ -1,0 +1,8 @@
+Django==5.2.7
+djangorestframework==3.16.1
+psycopg2-binary==2.9.9    # if using PostgreSQL
+gunicorn==21.2.0           # optional for production
+requests==2.32.0           # optional
+python-dotenv==1.0.0       # optional
+PyJWT==2.8.0               
+
