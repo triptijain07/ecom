@@ -5,7 +5,7 @@ pipeline {
 
         stage('Pull Latest Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/triptijain07/ecom-microservices.git'
+                git branch: 'main', url: 'https://github.com/triptijain07/ecom.git'
             }
         }
 
