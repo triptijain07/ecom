@@ -150,7 +150,6 @@ JWT_SECRET_KEY = "django-insecure-%$h2nuhjliy!w4z1*9o*fm6r-38@sntd(z&j-s0uztl($_
 JWT_ALGORITHM = "HS256"
 JWT_ACCESS_TOKEN_EXPIRE_MINUTES = 15
 JWT_REFRESH_TOKEN_EXPIRE_DAYS = 7
-
 '''
 DATABASES = {
     "default": {
